@@ -1,0 +1,31 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "Proyecto Contact Manager - Módulo 1 (Gestión de contactos con React, Vite y TailwindCSS)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "tailwindcss",
+    "contact-manager",
+    "frontend"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.2.0"
+  }
+}
