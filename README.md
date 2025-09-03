@@ -1,25 +1,21 @@
-# 📓 Contact Manager - Proyecto Módulo 1  
+# 📓 Contact Manager - Proyecto Módulo 2  
 
-Aplicación desarrollada en **React** que permite gestionar una lista de contactos con funcionalidades de visualización, búsqueda, favoritos, validación de formularios y persistencia local.  
+Extensión del proyecto **Contact Manager (Módulo 1)**, ahora integrando **funcionalidades avanzadas** que consolidan lo aprendido en el **Módulo 2: Desarrollo Frontend con React**.  
 
-Este proyecto consolida las competencias de **desarrollo frontend moderno**, aplicando conceptos de:  
-- Componentes  
-- Props  
-- State  
-- Callbacks  
-- Formularios controlados  
-- Eventos  
-- Patrones de arquitectura escalable en React  
+Se añaden características como **consumo de APIs, asincronía, navegación con React Router y persistencia avanzada**, elevando el nivel técnico de la aplicación.  
 
 ---
 
 ## 🛠️ Stack Tecnológico  
 - [React](https://reactjs.org/)  
-- [Vite](https://vitejs.dev/) como bundler (opcional, puedes usar Create React App)  
+- [Vite](https://vitejs.dev/) como bundler  
 - [TailwindCSS](https://tailwindcss.com/) para estilos  
+- [React Router](https://reactrouter.com/) para navegación y rutas dinámicas  
 - [Netlify](https://www.netlify.com/) para despliegue  
+- [API Externa](https://jsonplaceholder.typicode.com/) (mock de datos) para integración y asincronía  
 
 ---
+
 ## ⚙️ Instrucciones de instalación y uso  
 
 1. Clonar el repositorio en tu máquina local:  
@@ -42,7 +38,7 @@ Este proyecto consolida las competencias de **desarrollo frontend moderno**, apl
 ---
 ## ✅ Funcionalidades implementadas  
 
-### Funcionalidades Core  
+### Funcionalidades Core  (Módulo 1)
 
 - 👀 **Visualización de contactos** en lista interactiva.  
 - ⭐ **Selección y destacado** de contactos individuales.  
@@ -53,13 +49,29 @@ Este proyecto consolida las competencias de **desarrollo frontend moderno**, apl
 
 ---
 
-### Funcionalidades Avanzadas (Retos)  
+### Funcionalidades Avanzadas (Módulo 1 + Módulo 2) 
 
 - 🔍 **Búsqueda inteligente multi-campo** (nombre, teléfono, estado de favorito) con highlighting.  
 - 🗂️ **Sistema de categorías** (Trabajo, Personal, Familia) con filtros visuales y código de colores.  
 - 💾 **Persistencia de datos con LocalStorage** para mantener la información entre sesiones.  
 - ✏️ **Edición de contactos existentes** usando formularios pre-poblados.  
 - 🌐 **Despliegue en Netlify** con URL funcional y configuración lista para producción.  
+
+---
+
+### Retos Adicionales de Implementación (Módulo 2)
+
+- 🔗 Consumo de API externa para obtener contactos iniciales y sincronizar datos.
+
+- 🔄 Manejo de asincronía con async/await y estados de carga (loading, error).
+
+- 🛣️ Navegación con React Router para acceder a diferentes vistas (Todos, Favoritos, Categorías).
+
+- 🧭 Rutas dinámicas y anidadas para detalle de contacto y categorías específicas.
+
+- 🧹 Hooks personalizados para separar la lógica de persistencia y consumo de API.
+
+- 📱 Optimización responsive avanzada para móviles y tablets.
 
 ---
 
@@ -76,22 +88,40 @@ Este proyecto consolida las competencias de **desarrollo frontend moderno**, apl
 
 
 ---
-## 📂 Estructura de Archivos Requerida  
 
-```bash
-contact-manager/
-│── public/
-│── src/
-│   ├── components/
-│   │   ├── ContactCard.jsx
-│   │   ├── ContactForm.jsx
-│   │   ├── ContactList.jsx
-│   │   ├── ContactSearch.jsx
-│   │   ├── Header.jsx
-│   ├── hooks/        # Custom hooks (opcional)
-│   ├── utils/        # Funciones utilitarias
-│   ├── data/contacts.js   # Data mock y constantes
-│   ├── App.jsx
-│   ├── index.js
-│── package.json
-│── README.md
+## 📜 Historias de Usuario (HU)  
+
+### HU1: Edición de Contactos  
+**Como usuario**, quiero **editar un contacto existente** para **actualizar su información cuando cambie algún dato**.  
+
+**Criterios de Aceptación:**  
+- El formulario se carga con los datos actuales del contacto.  
+- Validación en tiempo real antes de guardar.  
+- El contacto actualizado se guarda en LocalStorage y en la API.  
+
+---
+
+### HU2: Integración con API Externa  
+**Como usuario**, quiero **sincronizar mis contactos con una API externa** para **acceder a mi información desde cualquier dispositivo**.  
+
+**Criterios de Aceptación:**  
+- Los datos se cargan al iniciar la app desde la API.  
+- La aplicación muestra estados de carga y error si la API falla.  
+- LocalStorage asegura persistencia incluso sin conexión.  
+
+---
+
+### HU3: Navegación por Categorías  
+**Como usuario**, quiero **navegar entre diferentes vistas (Todos, Favoritos, Categorías)** para **organizar mejor mis contactos**.  
+
+**Criterios de Aceptación:**  
+- Implementación de rutas con React Router.  
+- Cada vista muestra la lista filtrada según la categoría.  
+- La URL refleja la ruta activa (`/favorites`, `/work`, `/personal`).  
+
+---
+
+👨‍💻 **Autor:** **Adriano Perez**  
+📅 **Proyecto Módulo 2 - Contact Manager**  
+
+
